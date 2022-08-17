@@ -1,0 +1,17 @@
+body{
+    background-color: #333;
+    width: 100%;
+    height: 100vh;
+}
+
+.imgProx{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    color: #FFF;
+}
+.imgProx img{
+    width: 200px;
+}
