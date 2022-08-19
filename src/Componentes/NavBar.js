@@ -1,10 +1,10 @@
-import { Component } from "react"
 import icon from "../img/pokeball.png"
+import BuscadorNav from "./BuscadorNav.js";
 
 
-export default class NavBar extends Component {
-    render() {
+const NavBar = () => {
         return (
+            <>
             <nav className='navbar navbar-expand-lg navbar-light bg-light'>
                 <div className='container-fluid'>
                     <a className='navbar-brand' href='#'>
@@ -30,17 +30,13 @@ export default class NavBar extends Component {
                                 <a className='nav-link' href='#'>Nosotros</a>
                             </li>
                         </ul>
-                        <form className='d-flex'>
-                            <input className='form-control me-sm-2' type='text' />
-                            <button
-                                className='btn btn-secondary my-2 my-sm-0'
-                                type='submit'>
-                                Buscar
-                            </button>
-                        </form>
+                        <BuscadorNav contBuscar='Buscar'/>
                     </div>
                 </div>
             </nav>
+            </>
         );
-    }
+    
 }
+
+export default NavBar

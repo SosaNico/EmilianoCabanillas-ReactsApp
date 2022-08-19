@@ -4,7 +4,7 @@ body{
     height: 100vh;
 }
 
-.imgProx{
+.imgCarrito{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +12,21 @@ body{
     height: 80vh;
     color: #FFF;
 }
-.imgProx img{
-    width: 200px;
+.imgCarrito img{
+    width: 150px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 13px;
+}
+.imgCarrito span{
+    width: 40px;
+    height: 40px;
+    background-color: #ff0000;
+    text-align: center;
+    line-height: 35px;
+    font-size: 20px;
+    border-radius: 50%;
+    position: relative;
+    top: 20px;
+    left: 80px;
 }

@@ -1,12 +1,12 @@
 import './App.css';
 import NavBar from './Componentes/NavBar';
-import ImgProx from './Componentes/ImgProximamente';
+import ImgCarrito from './Componentes/Carrito';
 function App() {
   
   return (
       <div className='app'>
           <NavBar/>
-          <ImgProx/>
+          <ImgCarrito/>
       </div>
   );
 }
