@@ -1,11 +1,13 @@
 import icon from "../img/pokeball.png"
 import BuscadorNav from "./BuscadorNav.js";
+import ImgCarrito from './Carrito';
+
 
 
 const NavBar = () => {
         return (
             <>
-            <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+            <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
                 <div className='container-fluid'>
                     <a className='navbar-brand' href='#'>
                         <img src={icon} alt='' className='img-icon' />
@@ -30,6 +32,7 @@ const NavBar = () => {
                                 <a className='nav-link' href='#'>Nosotros</a>
                             </li>
                         </ul>
+                        <ImgCarrito/>
                         <BuscadorNav contBuscar='Buscar'/>
                     </div>
                 </div>

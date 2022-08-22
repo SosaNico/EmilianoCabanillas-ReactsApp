@@ -3,8 +3,8 @@ import imgCarrito from '../img/carritoball.svg'
 const ImgCarrito = () => {
         return (
             <div className="imgCarrito">
-                <span>1</span>
-                <img src={imgCarrito} alt="" />
+                {<span>0</span>}
+                <img src={imgCarrito} alt=""/>
             </div>
         );
     

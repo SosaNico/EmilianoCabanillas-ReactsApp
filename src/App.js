@@ -1,12 +1,13 @@
 import './App.css';
 import NavBar from './Componentes/NavBar';
-import ImgCarrito from './Componentes/Carrito';
+import ItemListContainer from './Componentes/ItemListContainer';
+
 function App() {
   
   return (
       <div className='app'>
           <NavBar/>
-          <ImgCarrito/>
+          <ItemListContainer saludo={"Bienvenido a PokeMerch"}/>
       </div>
   );
 }
