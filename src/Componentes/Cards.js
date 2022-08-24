@@ -5,6 +5,10 @@ import portadaThor from "../img/portadas/Thor Love and Thunder.jpg"
 import portadaJurassic from "../img/portadas/Jurassic World Dominion.jpg"
 import portadaMinions from "../img/portadas/Minions El origen de Gru.jpg"
 import CardsContainer from './CardsContainer';
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
 
 const Cards = ({saludo}) => {
     const PELICULAS = [
@@ -60,6 +64,7 @@ const Cards = ({saludo}) => {
         }
     ]
     console.log(PELICULAS);
+    const [cont, setCont] = useState(0)
     return (
         <>
         <h1 className='text-center text-black  p-2'>{saludo}</h1>
@@ -67,15 +72,27 @@ const Cards = ({saludo}) => {
                 <div className="row">
                     {
                         PELICULAS.map(peliculas =>(
-                            <div className="imgPoster col-md-4" key={peliculas.id}>
+                            <div className="imgPoster col-md-4 d-flex  flex-md-column" key={peliculas.id}>
                                 <CardsContainer titulo={peliculas.Titulo} tituloOriginal={peliculas.Titulo_Original} sinopsis={peliculas.sinopsis} año={peliculas.año} genero={peliculas.genero} precio={peliculas.precio} poster={peliculas.poster}/>
+                                <button className="btn btn-outline-primary bg-dark m-auto w-50" onClick={() => {setCont(cont + 1)}}>Alquilar</button>    
                             </div>
                         ))
                     }
                 </div>
             </div>
+                <ImgCarrito cont={cont}/>
         </>
-     );
+    );
 }
  
 export default Cards;
+const ImgCarrito = ({cont}) => {
+    return (
+        <div className="imgCarrito">
+            <span>{cont}</span>
+            <div className="icon">
+                <FontAwesomeIcon icon={faCartShopping} />
+            </div>
+        </div>
+    );
+}

@@ -4,8 +4,7 @@ import CardsContainer from './CardsContainer';
 const ImgCarrito = ({cont}) => {
         return (
             <div className="imgCarrito">
-                <span>{cont}</span>
-                <img src="{}" alt=""/>
+                {/* <span>{cont}</span> */}
             </div>
         );
     
