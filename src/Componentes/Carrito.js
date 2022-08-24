@@ -1,10 +1,11 @@
-import imgCarrito from '../img/carritoball.svg'
+import React from 'react';
+import CardsContainer from './CardsContainer';
 
-const ImgCarrito = () => {
+const ImgCarrito = ({cont}) => {
         return (
             <div className="imgCarrito">
-                {<span>0</span>}
-                <img src={imgCarrito} alt=""/>
+                <span>{cont}</span>
+                <img src="{}" alt=""/>
             </div>
         );
     

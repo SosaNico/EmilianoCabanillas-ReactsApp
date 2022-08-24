@@ -1,6 +1,5 @@
-import icon from "../img/pokeball.png"
 import BuscadorNav from "./BuscadorNav.js";
-import ImgCarrito from './Carrito';
+import ImgCarrito from "./Carrito.js";
 
 
 
@@ -10,7 +9,7 @@ const NavBar = () => {
             <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
                 <div className='container-fluid'>
                     <a className='navbar-brand' href='#'>
-                        <img src={icon} alt='' className='img-icon' />
+                        <img src="#" alt='' className='img-icon' />
                     </a>
                     <button
                         className='navbar-toggler'
@@ -26,10 +25,10 @@ const NavBar = () => {
                     <div className='collapse navbar-collapse' id='navbarColor02'>
                         <ul className='navbar-nav me-auto'>
                             <li className='nav-item'>
-                                <a className='nav-link' href='#'>PokeMerch</a>
+                                <a className='nav-link' href='#'>Peliculas</a>
                             </li>
                             <li className='nav-item'>
-                                <a className='nav-link' href='#'>Nosotros</a>
+                                <a className='nav-link' href='#'>Series</a>
                             </li>
                         </ul>
                         <ImgCarrito/>
