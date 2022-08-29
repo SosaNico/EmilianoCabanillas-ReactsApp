@@ -91,7 +91,7 @@ const Cards = ({saludo}) => {
                 </div>
             </div>
                 <ImgCarrito cont={cont}/>
-                <Contador cant={10}/>
+                <Contador stock={10}/>
         </>
     );
 }
