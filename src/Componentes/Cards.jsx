@@ -1,13 +1,10 @@
 import React, { useEffect } from 'react';
 import CardsContainer from './CardsContainer';
+import Contador from './Contador';
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-import portadaDBS from "../img/portadas/Dragon Ball Super SuperHero.jpg"
-import portadaPredator from "../img/portadas/Predator La presa.jpg"
-import portadaThor from "../img/portadas/Thor Love and Thunder.jpg"
-import portadaJurassic from "../img/portadas/Jurassic World Dominion.jpg"
 
 const PELICULAS = [
     {
@@ -17,7 +14,7 @@ const PELICULAS = [
         sinopsis: "Son Goku destruyó en su momento al Ejército Red Ribbon. Ahora, ciertos individuos han decidido continuar con su legado y han creado a los androides definitivos: Gamma 1 y Gamma 2. Estos dos androides se autoproclaman \"superhéroes\" y deciden atacar a Piccolo y a Gohan. ¿Cuál es el objetivo del Nuevo Ejército Red Ribbon?  Ante un peligro inminente, ¡llega el momento del despertar del Superhéroe!",
         año: "2022-11-06",
         genero: "Animada",
-        poster: portadaDBS,
+        poster: "./img/portadas/Dragon Ball Super SuperHero.jpg",
         precio: "$399,99"
     },
     {
@@ -27,7 +24,7 @@ const PELICULAS = [
         sinopsis: "Cuarta película sobre \"Thor\" del MCU, en la que el Dios del trueno contará con Lady Thor como acompañante, personaje que interpretará Natalie Portman.",
         año: "2022-07-06",
         genero: "acción",
-        poster: portadaThor,
+        poster: "./img/portadas/Thor Love and Thunder.jpg",
         precio: "$229,99"
     },
     {
@@ -37,7 +34,7 @@ const PELICULAS = [
         sinopsis: "Ambientada hace 300 años en la Nación Comanche. Naru es una joven guerrera, feroz y altamente hábil, que se crió a la sombra de algunos de los cazadores más legendarios que deambulan por las Grandes Llanuras. Cuando el peligro amenaza su campamento, se dispone a proteger a su gente. La presa a la que acecha y, en última instancia, se enfrenta, resulta ser un depredador alienígena evolucionado con un arsenal técnicamente avanzado, lo que deriva en un enfrentamiento cruel y aterrador entre los dos adversarios.",
         año: "2022-08-02",
         genero: "acción",
-        poster: portadaPredator,
+        poster: "./img/portadas/Predator La presa.jpg",
         precio: "$279,99"
     },
     {
@@ -47,7 +44,7 @@ const PELICULAS = [
         sinopsis: "Cuatro años después de la destrucción de Isla Nublar, los dinosaurios conviven – y cazan – con los seres humanos en todo el mundo. Este frágil equilibrio cambiará el futuro y decidirá, de una vez por todas, si los seres humanos seguirán en la cúspide de los depredadores en un planeta que comparten con los animales más temibles de la creación.",
         año: "2022-06-01",
         genero: "acción",
-        poster: portadaJurassic,
+        poster: "./img/portadas/Jurassic World Dominion.jpg",
         precio: "$219,99"
     }
 ]
@@ -69,10 +66,12 @@ const Cards = ({saludo}) => {
         getData(status)
         .then(peliculasData =>{
             const dataPeliculasJSX = peliculasData.map(DataPelis =>(
+                
                 <div className="imgPoster col-md-3 d-flex flex-md-column" key={DataPelis.id}>
                     <CardsContainer titulo={DataPelis.Titulo} tituloOriginal={DataPelis.Titulo_Original} sinopsis={DataPelis.sinopsis} año={DataPelis.año} genero={DataPelis.genero} precio={DataPelis.precio} poster={DataPelis.poster}/>
-                    <button className="btn btn-outline-primary bg-dark m-auto w-50" onClick={() => {setCont(cont + 1)}}>Alquilar</button>    
+                    <button className="btn btn-outline-primary bg-dark m-auto w-50" onClick={() => {setCont(cont + 1)}}>Alquilar</button>   
                 </div>
+                
             ))
             setPeliculas(dataPeliculasJSX)
             console.log(dataPeliculasJSX);
@@ -92,6 +91,7 @@ const Cards = ({saludo}) => {
                 </div>
             </div>
                 <ImgCarrito cont={cont}/>
+                <Contador cant={10}/>
         </>
     );
 }

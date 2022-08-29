@@ -1,5 +1,5 @@
-import BuscadorNav from "./BuscadorNav.js";
-import ImgCarrito from "./Carrito.js";
+import BuscadorNav from "./BuscadorNav.jsx";
+import ImgCarrito from "./Carrito.jsx";
 
 
 
