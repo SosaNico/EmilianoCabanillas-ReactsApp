@@ -66,12 +66,10 @@ const Cards = ({saludo}) => {
         getData(status)
         .then(peliculasData =>{
             const dataPeliculasJSX = peliculasData.map(DataPelis =>(
-                
                 <div className="imgPoster col-md-3 d-flex flex-md-column" key={DataPelis.id}>
                     <CardsContainer titulo={DataPelis.Titulo} tituloOriginal={DataPelis.Titulo_Original} sinopsis={DataPelis.sinopsis} año={DataPelis.año} genero={DataPelis.genero} precio={DataPelis.precio} poster={DataPelis.poster}/>
                     <button className="btn btn-outline-primary bg-dark m-auto w-50" onClick={() => {setCont(cont + 1)}}>Alquilar</button>   
                 </div>
-                
             ))
             setPeliculas(dataPeliculasJSX)
             console.log(dataPeliculasJSX);
