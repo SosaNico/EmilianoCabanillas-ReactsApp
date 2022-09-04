@@ -2,7 +2,7 @@ export const PRODUCTOS = [
     {
         id: 1,
         title: "Mens Casual Premium Slim Fit T-Shirts ",
-        price: 22.3,
+        price: 22.29,
         description:
             "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.",
         category: "Ropa Hombre",
@@ -78,3 +78,5 @@ export const PRODUCTOS = [
         stock: 16
     }
 ];
+
+

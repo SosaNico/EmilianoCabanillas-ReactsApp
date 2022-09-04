@@ -1,8 +1,10 @@
 import { React, useState } from "react";
+import './items.css'
+
 
 const ItemCount = ({stock}) => {
 
-    const [cont, setCont] = useState(stock)
+    const [cont, setCont] = useState(1)
 
     const sumar = () => {
         cont < stock && setCont(cont +1)
@@ -12,13 +14,13 @@ const ItemCount = ({stock}) => {
     }
 
     return ( 
-        <div className="d-flex">
-            <button className="btn btn-primary" onClick={sumar}>+</button>
-            {(cont === 0) ?  <input type="text" defaultValue={cont} className="form-control text-center is-invalid" id="inputInvalid" />
- : <input className="form-control text-center" id="readOnlyInput" type="text" defaultValue={cont} readOnly />}
-            <button className="btn btn-secondary" onClick={restar}>-</button>
+        <div className="contContador">
+            <button className="btnRestar btn_" onClick={restar}>-</button>
+            <input className="inptCont" type="text" readOnly value={cont}/>
+            <button className="btnSumar btn_" onClick={sumar}>+</button>
         </div>
     );
 }
 
 export default ItemCount;
+

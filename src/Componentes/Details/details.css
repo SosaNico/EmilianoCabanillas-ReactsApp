@@ -84,11 +84,11 @@ body {
 .descrip {
     font-size: 20px;
     text-align: left;
-    width: 300px;
+    width: 500px;
     padding: 5px;
     border-radius: 5px;
-    color: #FFF;
-    background-color: #696969;
+    color: rgb(5, 5, 5);
+    background-color: #f1f1f1;
 }
 .descrip p{
     font-weight: 300;
@@ -98,19 +98,21 @@ body {
     margin: 15px;
     font-size: 26px;
     display: flex;
-    text-align: center;
     align-items: center;
 }
 
 .contPrecio h4 {
     color: #000;
-    margin-right: 10px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .contPrecio__data {
     display: flex;
     margin: 10px auto;
-    color: #fff;
+    color: #000;
+    font-size: 35px;
+    font-weight: 500;
 }
 
 .contPrecio .signo {
@@ -121,6 +123,6 @@ body {
 
 .contPrecio .N {
     padding: 5px;
-    background-color: #696969;
+    background-color: #cccccc;
     border-radius: 0 5px 5px 0;
 }
