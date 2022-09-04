@@ -1,17 +1,16 @@
 import './App.css';
-import NavBar from './Componentes/NavBar';
-import Cards from './Componentes/Cards';
-import Contador from './Componentes/Contador';
-import Footer from './Componentes/Footer';
+import NavBar from './Componentes/NavBar/NavBar';
+import ItemListContainer from './Componentes/Productos/ItemListContainer';
+import ItemDetailsContainer from './Componentes/Details/ItemDetailsContainer';
+
 
 function App() {
   
   return (
       <div className='App'>
           <NavBar/>
-          <Cards saludo={"Bienvenido a El Señor del Anillo"}/>
-          {/* <Contador/> */}
-          <Footer/>
+          <ItemListContainer saludo={"Bienvenido"}/>
+          <ItemDetailsContainer/>
       </div>
   );
 }

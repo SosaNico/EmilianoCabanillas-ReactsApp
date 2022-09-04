@@ -6,33 +6,11 @@ body{
 .App{
     height: 100%;
     width: 100%;
-    background: rgb(24,101,208);
-    background: linear-gradient(0deg, rgba(24,101,208,1) 0%, rgba(58,158,63,1) 100%);
-}
-.imgPoster{
-    overflow: hidden;
-}
-.sinopsis{
-    display: block;
-    transition: .2s cubic-bezier(.98,.22,.62,.94);
-    transform: translateX(450px);
-    position: absolute;
+    background: #141414;
     
+    /* background: linear-gradient(0deg, rgba(24,101,208,1) 0%, rgba(58,158,63,1) 100%); */
 }
-.imgPoster:hover .sinopsis{
-    display: block !important;
-    position: absolute;
-    background-color: #ffffffe7;
-    width: 98%;
-    padding: 10px;
-    font-size: 20px;
-    color: #000;
-    transform: translateX(0px);
-}
-.imgPoster span{
-    font-size: 30px;
-    font-weight: bold;
-}
+
 .imgCarrito{
     display: block;
     position: fixed;

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    /* border: 1px solid red; */
+}
+/* 
+background: #141414; 
+background-color: orange;
+*/
+.navBar{
+    background-color: #333;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menuInicio{
+    display: flex;
+    align-items: center;
+}
+.ropaHombre, .ropaMujer, .home{
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px;
+    border-radius: 50%;
+    position: relative;
+    top: 20px;
+    cursor: pointer;
+    transition: .15s ease-in-out;
+    box-shadow: 1px 2px 5px 1px black;
+}
+
+.home{
+    width: 60px;
+    height: 60px;
+    line-height: 55px;
+    font-size: 26px;
+    top: 22px;
+    background-color: #fff;
+}
+.ropaHombre a, .ropaMujer a, .home a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 26px;
+}
+.ropaHombre{
+    background-color: #5cb6e0;
+}
+.ropaMujer{
+    background-color: #db3c86;
+}
+.ropaHombre:hover, .ropaMujer:hover{
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+.logo a span{
+    color: #fff;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.FormBuscador{
+    margin-right: 10px;
+}
+.inpBuscar{
+    outline: none;
+    border: none;
+    width: 100px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+.btnBuscar{
+    width: 60px;
+    background-color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+}
+.btnBuscar:hover{
+    background-color: orange;
+}

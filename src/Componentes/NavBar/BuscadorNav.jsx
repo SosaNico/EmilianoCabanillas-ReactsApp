@@ -4,8 +4,8 @@ import Boton from "./Boton";
 const BuscadorNav = ({boton}) => {
     return ( 
         <>
-        <form className='d-flex'>
-            <input className='form-control me-sm-2' type='text' />
+        <form className='FormBuscador'>
+            <input className='inpBuscar' type='text' />
             <Boton />
         </form>
         </>
