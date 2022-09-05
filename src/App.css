@@ -1,12 +1,14 @@
 *{padding: 0; margin: 0; box-sizing: border-box !important;}
 body{
-    background-color: #686868;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
     
 }
 .App{
     height: 100%;
-    width: 100%;
-    background: #141414;
+    width: 100% !important;
+    background: #fff;
     
     /* background: linear-gradient(0deg, rgba(24,101,208,1) 0%, rgba(58,158,63,1) 100%); */
 }

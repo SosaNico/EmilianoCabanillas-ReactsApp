@@ -8,12 +8,9 @@
 }
 
 body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    background: #141414;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #fff;
 }
 
 
@@ -25,6 +22,7 @@ body {
     display: flex;
     align-items: center;
     background-color: #fff;
+    box-shadow: 0 0 5px #000;
 }
 
 .nombreItem {
@@ -39,6 +37,7 @@ body {
 .imgItemCont {
     text-align: center;
     padding: 20px;
+    /* border: 2px solid #000; */
 }
 
 .imgItem {

@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom'
 import BuscadorNav from "./BuscadorNav.jsx";
-import CartWidget from "./CartWidget.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPerson, faPersonDress, faHouse } from "@fortawesome/free-solid-svg-icons";
 import './navBar.css'
@@ -11,30 +11,30 @@ const NavBar = () => {
         <>
             <nav className="navBar">
                 <div className="logo">
-                    <a href="#">
+                    <a href="/">
                         <img src="#" alt="" className="imgLogo" />
                         <span>Ignite Indumentaria</span>
                     </a>
                 </div>
                 <div className="menuInicio">
                     <div className="ropaHombre">
-                        <a href="#">
+                        <Link to={`/categoria/Ropa Hombre`}>
                             <FontAwesomeIcon icon={faPerson} />
-                        </a>
+                        </Link>
                     </div>
-                    <div className="home">
-                        <a href="#">
-                            <FontAwesomeIcon icon={faHouse} />
-                        </a>
-                    </div>
+                        <div className="home">
+                            <Link to="/">
+                                <FontAwesomeIcon icon={faHouse} />
+                            </Link>
+                        </div>
                     <div className="ropaMujer">
-                        <a href="#">
+                        <Link to={`/categoria/Ropa Mujer`}>
                             <FontAwesomeIcon icon={faPersonDress} />
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="buscador">
-                    <BuscadorNav/>
+                    <BuscadorNav />
                 </div>
             </nav>
 
