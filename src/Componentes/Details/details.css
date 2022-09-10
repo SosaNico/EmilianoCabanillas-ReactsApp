@@ -6,122 +6,157 @@
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
 }
+:root{
+    --color-principal: #2D7DD2;
+    --color-secundario: #97CC04;
+    --color-terciario: #EEB902;
+    --color-opcion1: #f45e01;
+    --color-opcion2: #af0606;
+}
 
-body {
-    height: 100vh;
+.contenedor{
     width: 100%;
-    background: #fff;
+    height: 90vh;
+    color: #000;   
 }
-
-
-
-.contenedorItem {
-    width: 900px;
-    height: 500px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0 0 5px #000;
-}
-
-.nombreItem {
-    color: #000;
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 20px;
-    text-decoration: underline;
-}
-
-.imgItemCont {
+.title{
     text-align: center;
-    padding: 20px;
-    /* border: 2px solid #000; */
+    text-transform: uppercase;
+    margin: 6px;
 }
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+}
+.contImg{
+    margin: 7px;
+    display: flex;
+}
+.imgLat{
 
-.imgItem {
-    width: 300px;
-    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.imgLat img{
+    width: 220px;
+    padding: 7px;
     border-radius: 13px;
 }
-
-.detallesItem {
-    width: 100%;
-    height: 100%;
+.imgMain img{
+    padding: 7px;
+    width: 440px;
+    border-radius: 13px;
+}
+.contDescripcion{
+    background: rgb(163,157,163);
+    background: linear-gradient(45deg, rgba(163,157,163,1) 0%, rgba(192,188,192,1) 48%, rgba(163,157,163,1) 97%);
+    width: 660px;
+    height: 430px;
     margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 13px;
+    color: #222;
 }
-
-.contColores {
-    width: 200px;
-    font-size: 20px;
-    text-align: left;
-    background-color: #696969;
-    padding: 5px;
-    border-radius: 5px;
-    color: #FFF;
+.contDescripcion .desc{
+    margin: 10px;
+    font-size: 22px;
+    font-weight: normal;
 }
-
-.contDetalles {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 200px;
-    width: 100%;
-    
-}
-
-.contColores ul {
-    list-style: disc;
-    list-style-position: inside;
-    font-weight: 300;
-}
-
-.descrip {
-    font-size: 20px;
-    text-align: left;
-    width: 500px;
-    padding: 5px;
-    border-radius: 5px;
-    color: rgb(5, 5, 5);
-    background-color: #f1f1f1;
-}
-.descrip p{
-    font-weight: 300;
-}
-
-.contPrecio {
-    margin: 15px;
+.contDescripcion p{
     font-size: 26px;
+    height: 160px;
+    margin-top: 20px;
+    margin: 10px;
+}
+.contDetalles{
     display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 100px;
+    width: 88%;
+    margin-top: 25px;
+    text-align: center;
+}
+.contDetalles .textoSup{
+    font-size: 18px;
+}
+.contDetalles .textoInf{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.column{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.contPrecio{
+    text-align: center;
+    /* background-color: #DDD; */
+    height: 110px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-
-.contPrecio h4 {
-    color: #000;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.contPrecio__data {
+.contInfoPrecio{
+    background-color: #fff;
     display: flex;
-    margin: 10px auto;
-    color: #000;
-    font-size: 35px;
-    font-weight: 500;
+    width: 200px;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 20px;
+    border-radius: 13px;
 }
-
-.contPrecio .signo {
-    padding: 5px;
-    border-radius: 5px 0 0 5px;
-    background-color: orange;
+.contPrecio .textoPrecio{
+    font-size: 22px;
 }
-
-.contPrecio .N {
-    padding: 5px;
-    background-color: #cccccc;
-    border-radius: 0 5px 5px 0;
+.contPrecio .textoInf{
+    font-size: 36px;
+    font-weight: bold;
+    margin: 6px;
+}
+.contCompra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.contador{
+    margin-right: 10px;
+}
+.contador input{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    background-color: #AAA;
+    font-weight: bold;
+    outline: none;
+}
+.contador button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #AAA;
+    cursor: pointer;
+}
+.btnComprar{
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    height: 50px;
+    filter: brightness(1.5);
+    transition: .5s;
+}
+.btnComprar:hover{
+    color: #fff;
+}
+.separador{
+    width: 2px;
+    height: 80%;
+    background-color: #5e5e5e;
 }

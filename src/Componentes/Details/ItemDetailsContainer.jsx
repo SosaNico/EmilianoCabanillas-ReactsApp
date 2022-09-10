@@ -6,12 +6,10 @@ import { PRODUCTOS } from '../mock/Productos';
 const ItemDetailsContainer = () => {
 
     const { id } = useParams();
-    console.log(id);
-
     const [dataItems, setDataItems] = useState();
-
+    
     useEffect(()=>{
-        const getData = new Promise (res => setTimeout(() => res(PRODUCTOS.find(prod => prod.id === Number(id))), 2000));
+        const getData = new Promise (res => setTimeout(() => res(PRODUCTOS.find(prod => prod.id === Number(id))), 500));
 
         getData.then(res =>  setDataItems(res)
         )},[])

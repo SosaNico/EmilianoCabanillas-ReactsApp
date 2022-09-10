@@ -13,25 +13,25 @@ const NavBar = () => {
                 <div className="logo">
                     <a href="/">
                         <img src="#" alt="" className="imgLogo" />
-                        <span>Ignite Indumentaria</span>
+                        <span>PokeTienda</span>
                     </a>
                 </div>
                 <div className="menuInicio">
-                    <div className="ropaHombre">
-                        <Link to={`/categoria/Ropa Hombre`}>
+                    <Link to={`/categoria/Ropa Hombre`}>
+                        <div className="ropaHombre">
                             <FontAwesomeIcon icon={faPerson} />
-                        </Link>
-                    </div>
-                        <div className="home">
-                            <Link to="/">
-                                <FontAwesomeIcon icon={faHouse} />
-                            </Link>
                         </div>
-                    <div className="ropaMujer">
-                        <Link to={`/categoria/Ropa Mujer`}>
+                    </Link>
+                    <Link to="/">
+                        <div className="home">
+                            <FontAwesomeIcon icon={faHouse} />
+                        </div>
+                    </Link>
+                    <Link to={`/categoria/Ropa Mujer`}>
+                        <div className="ropaMujer">
                             <FontAwesomeIcon icon={faPersonDress} />
-                        </Link>
-                    </div>
+                        </div>
+                    </Link>
                 </div>
                 <div className="buscador">
                     <BuscadorNav />
