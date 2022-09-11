@@ -5,7 +5,7 @@ import CartWidget from '../NavBar/CartWidget';
 const Card = ({productos}) => {
     return ( 
         <div>
-            <div className="container-fluid">
+            <div className="container">
                 <div className="row pt-5">
                     <h3 className="text-center mb-4">NUESTROS PRODUCTOS</h3>
                 </div>

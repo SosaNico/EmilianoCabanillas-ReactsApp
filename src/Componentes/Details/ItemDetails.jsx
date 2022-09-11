@@ -5,42 +5,42 @@ import ItemCount from "../Productos/ItemCount";
 import "./details.css";
 
 const ItemDetails = ({ dataItem }) => {
-    let { title, description, price, estado, stock, color } = dataItem;
+    let { title, description, price, estado } = dataItem;
     const { front, side, back } = dataItem.image;
 
     const [cart, setCart] = useState(false);
-    const { addItem, carrito } = useCartContext();
+    const { addItem } = useCartContext();
 
 
     const onAdd = (cantidad) =>{
         setCart(true)
         addItem(dataItem, cantidad)
-        let stockRestar = stock - cantidad
-        stock = stockRestar;
+        let stockRestar = dataItem.stock - cantidad
+        dataItem.stock = stockRestar;
     }
 
     return (
         <>
-            <div className='contenedor' style={{ backgroundColor: color }}>
+            <div className='contenedor' >
                 <div className='main'>
                     <div className='contImg'>
+                            <div className='imgMain'>
+                                <img
+                                    className='imgPrincipal'
+                                    src={front}
+                                    alt='Imagen Frente'
+                                />
+                            </div>
                         <div className='imgLat'>
-                            <img
-                                className='imgLateral'
-                                src={side}
-                                alt='Imagen Lateral'
-                            />
                             <img
                                 className='imgLateral'
                                 src={back}
                                 alt='Imagen Atras'
                             />
-                        </div>
-                        <div className='imgMain'>
                             <img
-                                className='imgPrincipal'
-                                src={front}
-                                alt='Imagen Frente'
+                                className='imgLateral'
+                                src={side}
+                                alt='Imagen Lateral'
                             />
                         </div>
                     </div>
@@ -57,23 +57,23 @@ const ItemDetails = ({ dataItem }) => {
                             <div className='column contStock'>
                                 <span className='textoSup'>STOCK</span>
                                 <span className='textoInf'>
-                                    {stock > 0 ? stock + ' unidades' : 'Sin Stock'}
+                                    {dataItem.stock > 0 ? dataItem.stock + ' unidades' : 'Sin Stock'}
                                 </span>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className='contPrecio'>
-                    <div className='contInfoPrecio'>
-                        <span className='textoPrecio'>PRECIO</span>
-                        <span className='textoInf'>${price}</span>
-                    </div>
-                    <div className='contCompra'>
-                        {cart 
-                        ? (<Link to={'/cart'}><button className='btnComprar btn_ inptCont'>COMPRAR</button></Link>)
-                        : (<ItemCount stock={stock} onClick={onAdd}/>)
-                        }
-                        
+                        <div className='contPrecio'>
+                            <div className='contInfoPrecio'>
+                                <span className='textoPrecio'>PRECIO</span>
+                                <span className='textoInf'>${price}</span>
+                            </div>
+                            <div className='contCompra'>
+                                {cart 
+                                ? (<Link to={'/cart'}><button className='btnComprar btn_ inptCont'>COMPRAR</button></Link>)
+                                : (<ItemCount stock={dataItem.stock} onClick={onAdd}/>)
+                                }
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

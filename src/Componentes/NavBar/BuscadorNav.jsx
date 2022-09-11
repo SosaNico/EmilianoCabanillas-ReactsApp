@@ -5,7 +5,7 @@ const BuscadorNav = ({boton}) => {
     return ( 
         <>
         <form className='FormBuscador'>
-            <input className='inpBuscar' type='text' />
+            <input className='inpBuscar' type='text' placeholder="Buscar"/>
             <Boton />
         </form>
         </>

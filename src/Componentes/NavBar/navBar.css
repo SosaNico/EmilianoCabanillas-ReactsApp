@@ -12,7 +12,7 @@ background: #141414;
 background-color: orange;
 */
 .navBar{
-    background-color: #474647;
+    background-color: #ececec;
     width: 100%;
     height: 70px;
     display: flex;
@@ -22,12 +22,15 @@ background-color: orange;
     top: 0;
     z-index: 1000;
 }
-
+.imgLogo{
+    width: 200px;
+    margin: 10px;
+}
 .menuInicio{
     display: flex;
     align-items: center;
 }
-.ropaHombre, .ropaMujer, .home{
+.iconoPoke, .iconoStars, .home{
     width: 50px;
     height: 50px;
     background-color: aqua;
@@ -58,62 +61,91 @@ background-color: orange;
     width: 200px;
     left: -70px;
     bottom: -45px;
+    color: #fff;
 }
-.ropaHombre a, .ropaMujer a, .home a{
+.iconoPoke a, .iconoPikachu a, .home a{
     text-decoration: none;
     font-weight: bold;
     font-size: 26px;
 }
-.ropaHombre{
-    background-color: #5cb6e0;
+.iconoPoke{
+    background-color: #ec0813;
+    width: 50px;
+    height: 50px;
     color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-/* .ropaHombre:hover::after{
-    content: 'Ropa Hombre';
+.iconoPoke img{
+    width: 30px;
+}
+.iconoPoke:hover::after{
+    content: 'Pokeballs';
     position: absolute;
     width: 200px;
     left: -75px;
-    bottom: -40px;
+    bottom: -50px;
+    color: #fff;
+    font-size: 22px;
 }
-.ropaMujer:hover::after{
-    content: 'Ropa Mujer';
+
+.iconoStars:hover::after{
+    color: #fff;
+    content: 'Ediciones Especiales';
     position: absolute;
+    font-size: 22px;
     width: 200px;
     left: -75px;
-    bottom: -40px;
-} */
-.ropaMujer{
-    color: #000;
-    background-color: #db3c86;
+    bottom: -50px;
 }
-.ropaHombre:hover, .ropaMujer:hover{
+.iconoStars{
+    color: #000;
+    background-color: goldenrod;
+    width: 50px;
+    height: 50px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconoStars img{
+    width: 35px;
+}
+.iconoPoke:hover, .iconoStars:hover{
     filter: brightness(1.2);
     transform: scale(1.05);
 }
-.logo a{
-    text-decoration: none;
-}
+
 .logo a span{
-    color: #fff;
+    color: rgb(255, 0, 0);
     font-size: 26px;
     margin-left: 20px;
 }
 .FormBuscador{
     margin-right: 10px;
+    display: flex;
+    align-items: center;
 }
+
 .inpBuscar{
     outline: none;
     border: none;
-    width: 100px;
+    width: 120px;
+    height: 50px;
     margin-right: 5px;
     border-radius: 5px;
+    font-size: 25px;
+    text-align: center;
 }
 .btnBuscar{
-    width: 60px;
-    background-color: #fff;
+    width: 80px;
+    height: 50px;
+    background-color: #FDCA32;
     text-transform: uppercase;
     border-radius: 5px;
     border: none;
+    font-size: 17px;
 }
 .btnBuscar:hover{
     background-color: orange;

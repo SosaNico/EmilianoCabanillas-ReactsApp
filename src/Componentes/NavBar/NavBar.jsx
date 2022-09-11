@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import BuscadorNav from "./BuscadorNav.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPerson, faPersonDress, faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+// import { ico_pokeball } from '../../../img/pokeball_ico.svg'
 import './navBar.css'
 
 
@@ -11,15 +12,14 @@ const NavBar = () => {
         <>
             <nav className="navBar">
                 <div className="logo">
-                    <a href="/">
-                        <img src="#" alt="" className="imgLogo" />
-                        <span>PokeTienda</span>
-                    </a>
+                    <Link to="/">
+                        <img src="../../../../img/logo_tienda.svg" alt="" className="imgLogo" />
+                    </Link>
                 </div>
                 <div className="menuInicio">
-                    <Link to={`/categoria/Ropa Hombre`}>
-                        <div className="ropaHombre">
-                            <FontAwesomeIcon icon={faPerson} />
+                    <Link to={`/categoria/PrimeraGeneracion`}>
+                        <div className="iconoPoke">
+                            <img src='../../../../img/pokeball_icon.svg' />
                         </div>
                     </Link>
                     <Link to="/">
@@ -27,9 +27,9 @@ const NavBar = () => {
                             <FontAwesomeIcon icon={faHouse} />
                         </div>
                     </Link>
-                    <Link to={`/categoria/Ropa Mujer`}>
-                        <div className="ropaMujer">
-                            <FontAwesomeIcon icon={faPersonDress} />
+                    <Link to={`/categoria/EdicionEspecial`}>
+                        <div className="iconoStars">
+                        <img src='../../../../img/stars_icon.svg' />
                         </div>
                     </Link>
                 </div>
