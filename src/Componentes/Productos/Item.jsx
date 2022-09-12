@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./item.css";
 
-const Item = ({ title, stock, image, id }) => {
+const Item = ({ title, video, image, id }) => {
     return (
         <div className='col-sm-12 col-md-6 col-lg-4'>
             <div className='cardProd'>
@@ -11,7 +11,9 @@ const Item = ({ title, stock, image, id }) => {
                     <span>ID: {id}</span>
                 </div>
                 <div className='contImg'>
-                    <img src={image} alt='' />
+                    
+                <img src={image} alt='' />
+                    
                 </div>
                 <div className='contenedorbtn'>
                     <Link to={`/detalles/${id}`}>

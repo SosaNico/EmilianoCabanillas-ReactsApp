@@ -6,6 +6,7 @@ export const PRODUCTOS = [
         description: "Fue desarrollada por Silph S.A. (al igual que las demás Poké Ball de su generación). Con respecto a sus características, puede decirse que se trata de una esfera color rojo y blanco, con una banda negra en la unión entre las dos mitades.",
         category: "PrimeraGeneracion",
         image: {
+            video: "../img/Pokeballs/pokebolaNormalVideo.mkv",
             front: "../img/Pokeballs/pokebolaNormal1.png",
             side: "../img/Pokeballs/pokebolaNormal2.png",
             back: "../img/Pokeballs/pokebolaNormal3.png"

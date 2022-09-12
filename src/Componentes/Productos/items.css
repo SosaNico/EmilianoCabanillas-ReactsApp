@@ -61,3 +61,6 @@ body{
 .disable:hover{
     filter: brightness(.6) !important;
 }
+video{
+    
+}
