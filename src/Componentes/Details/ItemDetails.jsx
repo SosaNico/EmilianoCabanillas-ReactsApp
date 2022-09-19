@@ -68,8 +68,12 @@ const ItemDetails = ({ dataItem }) => {
                             </div>
                             <div className='contCompra'>
                                 {cart 
-                                ? (<Link to={'/cart'}><button className='btnComprar btn_ inptCont'>COMPRAR</button></Link>)
-                                : (<ItemCount stock={dataItem.stock} onClick={onAdd}/>)
+                                    ? ( <div style={{display: 'flex', flexDirection: 'column'}}>
+                                        <Link to={'/cart'}><button className='btnComprar btn_ inptCont'>IR AL CARRITO</button></Link>
+                                        <Link to={'/'}><button style={{border: '2px solid #d3b822', background: "#a39da3"}} className='btnComprar btn_ inptCont'>SEGUIR COMPRANDO</button></Link>
+                                        </div>
+                                      )
+                                    : (<ItemCount stock={dataItem.stock} onClick={onAdd}/>)
                                 }
                                 
                             </div>

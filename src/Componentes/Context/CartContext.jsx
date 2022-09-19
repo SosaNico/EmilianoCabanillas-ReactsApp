@@ -9,23 +9,24 @@ export const CartProvider = ({children}) => {
 
     const addItem = (item, cantidad) => {
         if(isInCart(item.id)){
-            setCarrito(carrito.map(prod=>{
-                return prod.id === item.id ? {...prod, cantidad: prod.cantidad + cantidad} : prod;
-            })); 
+            setCarrito(carrito.map(prod => prod.id === item.id ? {...prod, cantidad: prod.cantidad + cantidad} : prod )); 
         }else{
             setCarrito([...carrito, {...item, cantidad: cantidad, stock: item.stock - cantidad, total: item.price * cantidad}])
         }
-        console.log('item :>> ', item.stock);
     }
-    console.log('carrito :>> ', carrito);
+    console.log('carrito context :>> ', carrito);
+
 
     const clear = () => setCarrito([]);
     const isInCart = (id) => carrito.find(prod => prod.id === id) ? true : false;
     const removeItem = (id) => setCarrito(carrito.filter(prod => prod.id !== id));
 
+    const cuentaTotal = () => carrito.reduce((acc, prod) => acc + prod.cantidad * prod.price, 0)
+    const totalProductos = () => carrito.reduce((acc, prod) => acc + prod.cantidad, 0)
+
     
     return (
-        <CartContext.Provider value={{clear, isInCart, removeItem, addItem, carrito}}>{children}</CartContext.Provider>
+        <CartContext.Provider value={{clear, isInCart, removeItem, addItem, cuentaTotal, totalProductos, carrito}}>{children}</CartContext.Provider>
     )
 
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import ItemList from './ItemList';
-import CartWidget from '../NavBar/CartWidget';
 
 const Card = ({productos}) => {
     return ( 
@@ -12,7 +11,6 @@ const Card = ({productos}) => {
                 <div className="row">
                     <ItemList productos={productos}/>
                 </div>
-                <CartWidget />
             </div>
         </div>
      );

@@ -1,0 +1,55 @@
+.contCarrito{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.tituloCarrito{
+    text-align: center;
+    margin: 15px;
+}
+.contProducto{
+    height: 100%;
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #222;
+    border-radius: 13px;
+    background-color: hsl(0, 0%, 100%) !important;
+}
+.contDatos{
+    display: flex;
+    justify-content: space-around;
+    width: 450px;
+}
+.contProducto:nth-of-type(3n){
+    background-color: rgb(165, 58, 58);
+}
+.faTrash{
+    transition: .2s;
+}
+.faTrash:hover{
+    color: red
+}
+.contCarr{
+    display: flex;
+    justify-content: space-around;
+}
+.contTotales{
+    
+    right: 10px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    color: #000;
+    background-color: #fff;
+    font-size: 35px;
+}

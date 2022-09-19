@@ -2,12 +2,18 @@ import { Link } from 'react-router-dom'
 import BuscadorNav from "./BuscadorNav.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
-// import { ico_pokeball } from '../../../img/pokeball_ico.svg'
+import CartWigdet from '../NavBar/CartWidget'
+import { useCartContext } from "../Context/CartContext";
+
+
+
 import './navBar.css'
 
 
 
 const NavBar = () => {
+    
+
     return (
         <>
             <nav className="navBar">
@@ -37,7 +43,7 @@ const NavBar = () => {
                     <BuscadorNav />
                 </div>
             </nav>
-
+            <CartWigdet />
         </>
     );
 

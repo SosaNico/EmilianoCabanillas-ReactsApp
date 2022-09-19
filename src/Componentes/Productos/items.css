@@ -52,7 +52,9 @@ body{
     width: 200px;
     border-radius: 5px;
     margin: 5px;
-    background-color: rgb(211, 184, 34);
+    color: #000;
+    font-size: 26px;
+    background-color: #d3b822;
 }
 .disable{
     cursor: not-allowed !important;
@@ -60,7 +62,4 @@ body{
 }
 .disable:hover{
     filter: brightness(.6) !important;
-}
-video{
-    
 }

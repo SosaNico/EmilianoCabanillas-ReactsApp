@@ -7,7 +7,7 @@
     font-family: 'Oswald', sans-serif;
 }
 :root{
-    --color-principal: #2D7DD2;
+    --color-principal: hsl(211, 65%, 50%);
     --color-secundario: #97CC04;
     --color-terciario: #EEB902;
     --color-opcion1: #f45e01;
@@ -52,7 +52,7 @@
     border-radius: 13px;
 }
 .contDescripcion{
-    background: rgb(163,157,163);
+    background: #a39da3;
     background: linear-gradient(45deg, rgba(163,157,163,1) 0%, rgba(192,188,192,1) 48%, rgba(163,157,163,1) 97%);
     width: 500px;
     height: 650px;
@@ -113,7 +113,7 @@
     width: 200px;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border-radius: 13px;
 }
 .contPrecio .textoPrecio{
@@ -161,7 +161,7 @@
     transition: .5s;
 }
 .btnComprar:hover{
-    color: #fff;
+    color: #000;
 }
 .separador{
     width: 2px;
