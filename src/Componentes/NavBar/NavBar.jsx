@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom'
 import BuscadorNav from "./BuscadorNav.jsx";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import CartWigdet from '../NavBar/CartWidget'
-import { useCartContext } from "../Context/CartContext";
 
 
 
@@ -25,17 +22,12 @@ const NavBar = () => {
                 <div className="menuInicio">
                     <Link to={`/categoria/PrimeraGeneracion`}>
                         <div className="iconoPoke">
-                            <img src='../../../../img/pokeball_icon.svg' />
-                        </div>
-                    </Link>
-                    <Link to="/">
-                        <div className="home">
-                            <FontAwesomeIcon icon={faHouse} />
+                            <img src='../../../../img/pokeball_icon.svg' alt='icono' />
                         </div>
                     </Link>
                     <Link to={`/categoria/EdicionEspecial`}>
                         <div className="iconoStars">
-                        <img src='../../../../img/stars_icon.svg' />
+                        <img src='../../../../img/stars_icon.svg' alt='icono' />
                         </div>
                     </Link>
                 </div>

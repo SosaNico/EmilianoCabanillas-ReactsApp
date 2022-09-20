@@ -1,4 +1,5 @@
-*{padding: 0; margin: 0; box-sizing: border-box !important;}
+*{padding: 0; margin: 0; box-sizing: border-box !important; font-family: 'Cabin', sans-serif;}
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,500;0,700;1,400&display=swap');
 body{
     width: 100%;
     height: 100vh;
@@ -7,6 +8,6 @@ body{
     height: 100%;
     width: 100% !important;
     
-    /* background: linear-gradient(0deg, rgba(24,101,208,1) 0%, rgba(58,158,63,1) 100%); */
+        /* background: linear-gradient(0deg, rgba(24,101,208,1) 0%, rgba(58,158,63,1) 100%); */
 }
 

@@ -1,0 +1,25 @@
+.contHome{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+.imgHome{
+    width: 79%;
+}
+.contBtnIngreso{
+    position: absolute;
+    bottom: 80px;
+}
+.btnIngreso{
+    background-color: #3C5FA6;
+    width: 300px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 13px;
+    border: none;
+}
+.btnIngreso:hover{
+    filter: brightness(0.95);
+}
