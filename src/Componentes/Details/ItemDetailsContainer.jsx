@@ -9,12 +9,12 @@ const ItemDetailsContainer = () => {
     const { id } = useParams();
     const [dataItems, setDataItems] = useState();
     
-    useEffect(()=>{
+    /* useEffect(()=>{
         const getData = new Promise (res => setTimeout(() => res(PRODUCTOS.find(prod => prod.id === Number(id))), 1600));
 
         getData.then(res =>  setDataItems(res)
         )},[])
-
+ */
     return dataItems ? <ItemDetails dataItem={dataItems}/> : <Loader/>
     
 }

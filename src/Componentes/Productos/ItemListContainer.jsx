@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PRODUCTOS } from '../mock/Productos';
+// import { PRODUCTOS } from '../mock/Productos';
 import { useParams} from 'react-router-dom'
 import Card from './Card';
 import Loader from '../Loader/Loader';
@@ -9,7 +9,7 @@ const ItemListContainer = () => {
 
     const { category } = useParams();
     
-    useEffect(() => {
+    /* useEffect(() => {
         const getData = () => {
             return new Promise(res => {
                 if(category){
@@ -26,7 +26,7 @@ const ItemListContainer = () => {
         }
 
         getData().then(dataProd => setProductos(dataProd))
-    }, [category]);
+    }, [category]); */
 
     return (
         <>
