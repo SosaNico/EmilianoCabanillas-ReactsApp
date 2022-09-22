@@ -2,13 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./item.css";
 
-const Item = ({ title, image, id }) => {
+const Item = ({ nombre, image, id }) => {
     return (
         <div className='col-sm-12 col-md-6 col-lg-4'>
             <div className='cardProd'>
                 <div className='contTitulo'>
-                    <h3>{title}</h3>
-                    <span>ID: {id}</span>
+                    <h3>{nombre}</h3>
                 </div>
                 <div className='contImg'>
                     <img src={image} alt='' />

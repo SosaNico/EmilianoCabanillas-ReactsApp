@@ -1,20 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import ItemDetails from './ItemDetails';
-import { PRODUCTOS } from '../mock/Productos';
 import Loader from '../Loader/Loader';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../Firebase/Firebase';
 
 const ItemDetailsContainer = () => {
 
     const { id } = useParams();
     const [dataItems, setDataItems] = useState();
-    
-    /* useEffect(()=>{
-        const getData = new Promise (res => setTimeout(() => res(PRODUCTOS.find(prod => prod.id === Number(id))), 1600));
 
-        getData.then(res =>  setDataItems(res)
-        )},[])
- */
+    const itemSelect = async (idItem) => {
+        try {
+            const item = doc(db, 'Items', idItem)
+            const resp = await getDoc(item)
+            const resultado = {id: resp.id, ...resp.data()}
+            setDataItems(resultado)
+        } catch (error) {
+            console.log('error :>> ', error);
+        }
+    }
+    
+    useEffect(() => {
+        itemSelect(id)
+    },[id])
+
+
     return dataItems ? <ItemDetails dataItem={dataItems}/> : <Loader/>
     
 }

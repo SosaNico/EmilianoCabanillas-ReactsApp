@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { collection, addDoc, getFirestore } from "firebase/firestore";
+import { collection, addDoc, getDoc, doc, deleteDoc, updateDoc, getFirestore, getDocs } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,6 +16,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+
+// Fn Cargar datos en DB
 async function cargarBBDD() {
     const resp = await fetch("../src/Componentes/mock/Productos.json");
     console.log('resp :>> ', resp);
@@ -32,5 +34,7 @@ async function cargarBBDD() {
         });
     });
 }
-cargarBBDD()
+
+
+
 export { db, app, cargarBBDD };

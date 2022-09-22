@@ -8,8 +8,8 @@ const ItemList = ({productos}) => {
         <>
             {
                 productos.map(productosData =>{
-                    const { video, front } = productosData.image
-                    return <Item key={productosData.id} title={productosData.title} price={productosData.price} image={front} video={video} id={productosData.id}/>
+                    const { front } = productosData.imagen
+                    return <Item key={productosData.id} nombre={productosData.nombre} precio={productosData.precio} image={front} id={productosData.id}/>
                 })
             }
             

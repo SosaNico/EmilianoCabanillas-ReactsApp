@@ -5,32 +5,31 @@ import ItemCount from "../Productos/ItemCount";
 import "./details.css";
 
 const ItemDetails = ({ dataItem }) => {
-    let { title, description, price, estado } = dataItem;
-    const { front, side, back } = dataItem.image;
+    let { nombre, descripcion, precio, estado } = dataItem;
+    const { front, side, back } = dataItem.imagen;
 
     const [cart, setCart] = useState(false);
     const { addItem } = useCartContext();
 
-
-    const onAdd = (cantidad) =>{
-        setCart(true)
-        addItem(dataItem, cantidad)
-        let stockRestar = dataItem.stock - cantidad
+    const onAdd = (cantidad) => {
+        setCart(true);
+        addItem(dataItem, cantidad);
+        let stockRestar = dataItem.stock - cantidad;
         dataItem.stock = stockRestar;
-    }
+    };
 
     return (
         <>
-            <div className='contenedor' >
+            <div className='contenedor'>
                 <div className='main'>
                     <div className='contImg'>
-                            <div className='imgMain'>
-                                <img
-                                    className='imgPrincipal'
-                                    src={front}
-                                    alt='Imagen Frente'
-                                />
-                            </div>
+                        <div className='imgMain'>
+                            <img
+                                className='imgPrincipal'
+                                src={front}
+                                alt='Imagen Frente'
+                            />
+                        </div>
                         <div className='imgLat'>
                             <img
                                 className='imgLateral'
@@ -45,9 +44,9 @@ const ItemDetails = ({ dataItem }) => {
                         </div>
                     </div>
                     <div className='contDescripcion'>
-                        <h2 className='title'>{title}</h2>
+                        <h2 className='title'>{nombre}</h2>
                         <span className='desc'>DESCRIPCION</span>
-                        <p>{description}</p>
+                        <p>{descripcion}</p>
                         <div className='contDetalles'>
                             <div className='column contEstado'>
                                 <span className='textoSup'>ESTADO</span>
@@ -57,25 +56,48 @@ const ItemDetails = ({ dataItem }) => {
                             <div className='column contStock'>
                                 <span className='textoSup'>STOCK</span>
                                 <span className='textoInf'>
-                                    {dataItem.stock > 0 ? dataItem.stock + ' unidades' : 'Sin Stock'}
+                                    {dataItem.stock > 0
+                                        ? dataItem.stock + " unidades"
+                                        : "Sin Stock"}
                                 </span>
                             </div>
                         </div>
                         <div className='contPrecio'>
                             <div className='contInfoPrecio'>
                                 <span className='textoPrecio'>PRECIO</span>
-                                <span className='textoInf'>${price}</span>
+                                <span className='textoInf'>${precio}</span>
                             </div>
                             <div className='contCompra'>
-                                {cart 
-                                    ? ( <div style={{display: 'flex', flexDirection: 'column'}}>
-                                        <Link to={'/cart'}><button className='btnComprar btn_ inptCont'>IR AL CARRITO</button></Link>
-                                        <Link to={'/'}><button style={{border: '2px solid #d3b822', background: "#a39da3"}} className='btnComprar btn_ inptCont'>SEGUIR COMPRANDO</button></Link>
-                                        </div>
-                                      )
-                                    : (<ItemCount stock={dataItem.stock} onClick={onAdd}/>)
-                                }
-                                
+                                {cart ? (
+                                    <div
+                                        style={{
+                                            display: "flex",
+                                            flexDirection: "column",
+                                        }}
+                                    >
+                                        <Link to={"/cart"}>
+                                            <button className='btnComprar btn_ inptCont'>
+                                                IR AL CARRITO
+                                            </button>
+                                        </Link>
+                                        <Link to={"/"}>
+                                            <button
+                                                style={{
+                                                    border: "2px solid #d3b822",
+                                                    background: "#a39da3",
+                                                }}
+                                                className='btnComprar btn_ inptCont'
+                                            >
+                                                SEGUIR COMPRANDO
+                                            </button>
+                                        </Link>
+                                    </div>
+                                ) : (
+                                    <ItemCount
+                                        stock={dataItem.stock}
+                                        onClick={onAdd}
+                                    />
+                                )}
                             </div>
                         </div>
                     </div>

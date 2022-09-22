@@ -8,12 +8,12 @@ import './CartItem.css'
 
 const CartItem = ({ producto }) => {
     const { removeItem, totalProductos } = useCartContext();
-    const { id, title, cantidad, precio, total } = producto;
+    const { id, nombre, cantidad, precio, total } = producto;
     return (
         <>
             <div className='contCarrito'>
                 <div className='contProducto'>
-                    <span>{title}</span>
+                    <span>{nombre}</span>
                     <div className='contDatos'>
                         <div className='cant'>
                             <span>Cantidad:</span>
