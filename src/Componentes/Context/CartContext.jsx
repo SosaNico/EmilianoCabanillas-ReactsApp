@@ -14,9 +14,7 @@ export const CartProvider = ({children}) => {
             setCarrito([...carrito, {...item, cantidad: cantidad, stock: item.stock - cantidad, total: item.precio * cantidad}])
         }
     }
-    console.log('carrito context :>> ', carrito);
-
-
+    //console.log('carrito context :>> ', carrito);
     const clear = () => setCarrito([]);
     const isInCart = (id) => carrito.find(prod => prod.id === id) ? true : false;
     const removeItem = (id) => setCarrito(carrito.filter(prod => prod.id !== id));

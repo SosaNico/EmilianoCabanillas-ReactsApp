@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useCartContext } from "../Context/CartContext";
 import CartItem from "./CartItem";
 
 const Cart = () => {
-    const { carrito, cuentaTotal } = useCartContext();
+    const { carrito, cuentaTotal, clear } = useCartContext();
 
     if (carrito.length === 0) {
         return <>
@@ -24,7 +25,10 @@ const Cart = () => {
             <div className="contTotales">
                 <span>TOTAL A PAGAR</span>
                 <span>${cuentaTotal()}</span>
-                <button className='btnComprar'>Finalizar Compra</button>
+                <Link to={'/checkout'}>
+                    <button className='btnComprar'>Finalizar Compra</button>
+                </Link>
+                <button className='btnComprar' onClick={clear}>Vaciar Carrito</button>
             </div>
         </div>
         </>

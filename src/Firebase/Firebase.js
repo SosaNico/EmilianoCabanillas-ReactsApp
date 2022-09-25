@@ -14,17 +14,17 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const db = getFirestore();
 
 
 // Fn Cargar datos en DB
 async function cargarBBDD() {
-    const resp = await fetch("../src/Componentes/mock/Productos.json");
-    console.log('resp :>> ', resp);
-    const data = await resp.json();
-    console.log('data :>> ', data);
+    const resp = await fetch("./Productos.json");
+        console.log('resp :>> ', resp);
+    const data = resp.json();
+        console.log('data :>> ', data);
     data.forEach(async (dataProd) => {
-        await addDoc(collection(db, "Items"), {
+        await addDoc(collection(db, "Productos"), {
             title: dataProd.title,
             price: dataProd.price,
             description: dataProd.description,

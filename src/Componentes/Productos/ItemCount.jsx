@@ -5,6 +5,7 @@ import './items.css'
 const ItemCount = ({stock, onClick}) => {
 
     const [cont, setCont] = useState(1)
+    
 
     const sumar = () => {
         cont < stock && setCont(cont + 1)

@@ -1,3 +1,3 @@
-// import { cargarBBDD } from "./Firebase";
+import { cargarBBDD } from "./Firebase";
 
 // cargarBBDD()
