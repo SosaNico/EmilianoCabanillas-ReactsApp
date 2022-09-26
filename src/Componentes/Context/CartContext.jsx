@@ -11,7 +11,7 @@ export const CartProvider = ({children}) => {
         if(isInCart(item.id)){
             setCarrito(carrito.map(prod => prod.id === item.id ? {...prod, cantidad: prod.cantidad + cantidad} : prod )); 
         }else{
-            setCarrito([...carrito, {...item, cantidad: cantidad, stock: item.stock - cantidad, total: item.precio * cantidad}])
+            setCarrito([...carrito, {...item, cantidad: cantidad, total: item.precio * cantidad}])
         }
     }
     //console.log('carrito context :>> ', carrito);

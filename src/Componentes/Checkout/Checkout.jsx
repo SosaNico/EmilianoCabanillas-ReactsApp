@@ -1,4 +1,4 @@
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, updateDoc, doc } from "firebase/firestore";
 import React, { useState } from "react";
 import { db } from "../../Firebase/Firebase";
 import { useCartContext } from "../Context/CartContext";
@@ -17,13 +17,16 @@ const Checkout = () => {
 
     const { Nombre, Email, Telefono } = buyer;
 
+    const updateStock = async (id, stock) => {
+        const itemRef = doc(db, 'Items', id)
+        await updateDoc(itemRef, ({stock: stock}))
+    }
     const generarTicket = async (data) => {
         try {
             const coleccion = collection(db, 'Tickets')
             const ticket = await addDoc(coleccion, data)
             setTicketOrden(ticket.id)
             console.log('ticket :>> ', ticket);
-            clear()
         } catch (error) {
             console.log('error', error)
         }
@@ -39,20 +42,28 @@ const Checkout = () => {
 
     const manejarSubmit = (e) => {
         e.preventDefault();
+
         const items = carrito.map((items) => {
             return {
                 id: items.id,
                 title: items.nombre,
                 precio: items.precio,
                 cantidad: items.cantidad,
+                stock: items.stock
             };
         });
+        console.log('carrito sub:>> ', carrito);
         const numEnvio = Math.floor(Math.random()*9999999)
         const fecha = new Date();
         const total = cuentaTotal();
         const ticket = { buyer, items, fecha, total, numEnvio };
         console.log("ticket :>> ", ticket);
+
+        let stockUpdate = items[0].stock - items[0].cantidad
+        updateStock(items[0].id, stockUpdate)
+
         generarTicket(ticket)
+        clear()
     };
 
     return (
@@ -94,6 +105,7 @@ const Checkout = () => {
                     <div className="msjCompra">
                         <h2>Su compra se realizo con exito</h2>
                         <span>La orden de compra es: {ticketOrden} </span>
+                        
                     </div>
                 )
             }
