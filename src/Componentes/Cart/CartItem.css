@@ -40,7 +40,6 @@
     justify-content: space-around;
 }
 .contTotales{
-    
     right: 10px;
     width: 300px;
     height: 300px;
@@ -52,4 +51,12 @@
     color: #000;
     background-color: #fff;
     font-size: 35px;
+}
+.contCartVacio{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

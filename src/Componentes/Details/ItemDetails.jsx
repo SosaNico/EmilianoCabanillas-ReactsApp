@@ -69,24 +69,15 @@ const ItemDetails = ({ dataItem }) => {
                             </div>
                             <div className='contCompra'>
                                 {cart ? (
-                                    <div
-                                        style={{
-                                            display: "flex",
-                                            flexDirection: "column",
-                                        }}
-                                    >
+                                    <div >
                                         <Link to={"/cart"}>
-                                            <button className='btnComprar btn_ inptCont'>
+                                            <button className='btnGhost'>
                                                 IR AL CARRITO
                                             </button>
                                         </Link>
-                                        <Link to={"/"}>
+                                        <Link to={"/categoria/"}>
                                             <button
-                                                style={{
-                                                    border: "2px solid #d3b822",
-                                                    background: "#a39da3",
-                                                }}
-                                                className='btnComprar btn_ inptCont'
+                                                className='btnSolid'
                                             >
                                                 SEGUIR COMPRANDO
                                             </button>

@@ -21,7 +21,7 @@ const ItemCount = ({stock, onClick}) => {
                 <input className="inptCont" type="text" readOnly value={stock ? cont : 0}/>
                 <button className="btnSumar btn_" onClick={sumar}>+</button>
             </div>
-            <button disabled={stock <= 0} className={stock ? 'btnComprar btn_ inptCont' : 'btnComprar btn_ inptCont disable'} onClick={()=>onClick(cont)}>AGREGAR AL CARRITO</button>
+            <button disabled={stock <= 0} className={stock ? 'btnSolid ' : 'btnSolid disable'} onClick={()=>onClick(cont)}>AGREGAR AL CARRITO</button>
         </div>
     );
 }

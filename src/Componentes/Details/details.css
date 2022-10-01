@@ -105,7 +105,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .contInfoPrecio{
     background-color: #fff;
@@ -113,8 +113,8 @@
     width: 200px;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 5px;
     border-radius: 13px;
+    margin-bottom: 15px;
 }
 .contPrecio .textoPrecio{
     font-size: 22px;
@@ -125,10 +125,12 @@
     margin: 6px;
 }
 .contCompra{
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
     user-select: none;
+    margin-bottom: 10px;
 }
 .contador{
     margin-right: 10px;
@@ -146,10 +148,11 @@
     width: 30px;
     height: 30px;
     border: none;
+    margin-bottom: 5px;
     background-color: #AAA;
     cursor: pointer;
 }
-.btnComprar{
+.btnSolid{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,10 +160,29 @@
     border: none;
     width: 200px;
     height: 60px;
-    filter: brightness(1.5);
+    font-size: 20px;
+    font-weight: bold;
     transition: .5s;
+    background-color: #3C5FA6;
+    border-radius: 8px;
+    margin-bottom: 4px;
 }
-.btnComprar:hover{
+.btnGhost{
+    
+    cursor: pointer;
+    border: none;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    color:#3C5FA6;
+    background-color: #fff;
+    font-weight: bold;
+    transition: .5s;
+    border:2px solid #3C5FA6;
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+.btnSolid:hover{
     color: #000;
 }
 .separador{

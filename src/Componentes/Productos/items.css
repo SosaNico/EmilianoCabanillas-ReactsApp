@@ -21,6 +21,8 @@ body{
     cursor: pointer;
     font-size: 26px;
     font-weight: bold;
+    color:#000;
+    background-color: #fff !important;
 }
 .inptCont{
     width: 100px;
@@ -29,11 +31,11 @@ body{
     outline: none;
     font-size: 20px;
     text-align: center;
-    color: #000;
+    color: #3C5FA6;
     font-weight: bold;
-    background-color: #bbb;
+    background-color: #fff;
     user-select: none;
-
+    margin-bottom: 10px;
     
 }
 .btnRestar{
@@ -48,18 +50,12 @@ body{
 .btn_:hover{
     filter: brightness(1.1);
 }
-.btnComprar{
-    width: 200px;
-    border-radius: 5px;
-    margin: 5px;
-    color: #000;
-    font-size: 26px;
-    background-color: #d3b822;
-}
+
 .disable{
     cursor: not-allowed !important;
-    background-color: #444;
+    background-color: #444 !important;
+    color: #222
 }
 .disable:hover{
-    filter: brightness(.6) !important;
+    filter: brightness(1.05) !important;
 }

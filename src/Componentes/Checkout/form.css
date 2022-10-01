@@ -1,0 +1,66 @@
+.contenedorFormulario{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.contForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.formulario input:not([type='submit']){
+    margin: 5px;
+    height: 80px;
+    width: 300px;
+    font-size: 26px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+}
+.btnFinalizar{
+    border-radius: 8px;
+    margin: 5px;
+    height: 80px;
+    width: 300px;
+    font-size: 26px;
+    background-color: #3C5FA6;
+    color: #fff ;
+    border: none;
+}
+.btnFinalizar:hover{
+    background-color: #365592;
+}
+
+.msjCompra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.msjCompra h2{
+    font-size: 35px;
+    margin: 10px;
+}
+.msjCompra .numOrden{
+    color:#365592;
+    background-color: #fff;
+    height: 100px;
+    width: 650px;
+    text-align: center;
+    line-height: 90px;
+    border-radius: 10px;
+    margin-top: 20px;
+}

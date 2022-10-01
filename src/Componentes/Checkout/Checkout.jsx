@@ -2,6 +2,7 @@ import { addDoc, collection, updateDoc, doc } from "firebase/firestore";
 import React, { useState } from "react";
 import { db } from "../../Firebase/Firebase";
 import { useCartContext } from "../Context/CartContext";
+import './form.css'
 
 
 const Checkout = () => {
@@ -70,11 +71,11 @@ const Checkout = () => {
         <>
             {
                 !ticketOrden ? (
-                    <>
+                    <div className="contenedorFormulario">
                     <h2>Finalizá tu compra</h2>
                 <div className='contForm'>
                 <span>Ingresa tus datos</span>
-                <form onSubmit={manejarSubmit}>
+                <form onSubmit={manejarSubmit} className='formulario'>
                     <input
                         type='text'
                         pattern='[Aa-Zz]*'
@@ -97,14 +98,15 @@ const Checkout = () => {
                         value={Telefono}
                         onChange={manejarOnChange}
                     />
-                    <input type='submit' value='Terminar Compra'/>
+                    <input type='submit' value='Terminar Compra' className="btnFinalizar"/>
                 </form>
             </div>
-            </>
+            </div>
                 ) : (
                     <div className="msjCompra">
                         <h2>Su compra se realizo con exito</h2>
-                        <span>La orden de compra es: {ticketOrden} </span>
+                        <span>La orden de compra es:</span>
+                        <span className="numOrden">{ticketOrden}</span>
                         
                     </div>
                 )
