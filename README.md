@@ -17,12 +17,13 @@
     Firebase
 
 ## Librerias
-    fortawesome
+    fortawesome / fontawesome
     Google Fonts
     Bootstrap
 
 ## Assets
     Imagenes realizadas en Blender
+    Iconos nav realizadas en Illustrator
 
 - Base
 
@@ -40,6 +41,8 @@
 # Demostracion
 
 ![Demostracion](https://firebasestorage.googleapis.com/v0/b/bbdd-poketienda.appspot.com/o/2022-10-03%2016-32-03.gif?alt=media&token=a2c941ac-edd1-4bf2-b4b9-e689d30e0e80)
+https://firebasestorage.googleapis.com/v0/b/bbdd-poketienda.appspot.com/o/2022-10-03%2016-32-03.gif?alt=media&token=a2c941ac-edd1-4bf2-b4b9-e689d30e0e80
+
 
 
 
